@@ -1,24 +1,29 @@
-# Win32 System Control from a UWP App Sample
+# Launch UWP App from Win32 App
 
-This sample demonstrates how a UWP application can call Win32 methods unavailable to a UWP application to control monitor brightness and global system volume. 
-The example uses a Win32 Desktop Extension and an AppService.
+This sample demonstrates how a Win32 C# Application can check if a UWP app is installed and launch it. Sample code is derived from this [article] (https://stackoverflow.com/questions/12925748/iapplicationactivationmanageractivateapplication-in-c)
 
-Note: This example will only work in Desktop scenarios
 
 ## Requirements
 
 * Visual Studio 2017 with Windows Universal App Development package installed
-* Windows SDK version 17025 (installed with Visual Studio 2017) or minimum SDK version 15063
+* Windows SDK version 17134 (installed with Visual Studio 2017)
 
 ## Running the Sample
 
-* Open SystemControl.sln with Visual Studio 2017
+* Open LaunchAppIfInstalled.sln with Visual Studio 2017
 
 * Select the Debug/x86 or Debug/x64 configuration. (Release/x86 and Release x/64 also work)
 
-* Set the SystemControl project as the StartUp project
+* Right-click on the LaunchAppIfInstalled-UWP and select Deploy
 
-* Press F5 to build and run the solution. 
+* Right-click on the ConsoleApp1-UWP and select Set as Startup Project
+
+* Press F5 to start the console app. The console app should run and launch the UWP app.
+
+* Find the LaunchAppIfInstalled-UWP in the start menu. Right click on LaunchAppIfInstalled-UWP and select install.
+
+* Press F5 to start the console app. The console app should report the app was not found.
+
 
 
 * Move the Brightness slider to change the Monitor brightness (note: setting monitor brightness is a very slow operation so moving the slider will take a while to get to the brightness setting.)
