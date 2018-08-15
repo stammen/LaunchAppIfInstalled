@@ -29,7 +29,13 @@ This sample demonstrates how a Win32 C# Application can check if a UWP app is in
 In order to replicate this scenario you will need to use the application user model ID of the your Windows Store app in the call to appActiveManager.ActivateApplication. You create this
 string by appending !App to the Package Family Name of your app.
 
-For example, if the Package Family Name of your app is f41b88ad-fb57-433c-863c-75e6978e7627_e8xk87pxx0yyw then the application user model ID of your app will be f41b88ad-fb57-433c-863c-75e6978e7627_e8xk87pxx0yyw!App
+For example, if the Package Family Name of your app is 
+
+    f41b88ad-fb57-433c-863c-75e6978e7627_e8xk87pxx0yyw 
+
+then the application user model ID of your app will be 
+
+    f41b88ad-fb57-433c-863c-75e6978e7627_e8xk87pxx0yyw!App
 
 You can find the Package Family Name of your app by looking at the Packaging tab of the Package.appxmanifest (double click on the Package.appxmanifest file in your solution).
 
